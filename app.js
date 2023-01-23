@@ -1,5 +1,15 @@
 var createError = require('http-errors');
 var express = require('express');
+// Set up mongoose connection
+const mongoose = require("mongoose");
+mongoose.set('strictQuery', false);
+const mongoDB = "mongodb+srv://victorponz:je40pv@cluster0.bglytil.mongodb.net/library?retryWrites=true&w=majority";
+
+main().catch(err => console.log(err));
+async function main() {
+  await mongoose.connect(mongoDB);
+}
+
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
