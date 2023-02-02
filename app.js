@@ -3,7 +3,7 @@ var express = require('express');
 // Set up mongoose connection
 const mongoose = require("mongoose");
 mongoose.set('strictQuery', false);
-const mongoDB = "mongodb+srv://victorponz:je40pv@cluster0.bglytil.mongodb.net/library?retryWrites=true&w=majority";
+const mongoDB = "mongodb://127.0.0.1:27017/library";
 
 main().catch(err => console.log(err));
 async function main() {
